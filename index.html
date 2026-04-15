@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Boobs — Monthly Snail Mail from Vietnam</title>
+  <meta name="description" content="Original art, weird humor, and handmade charm delivered to your mailbox every month by a tattoo artist in Vietnam.">
+  <meta property="og:title" content="Floating Boobs — Monthly Snail Mail">
+  <meta property="og:description" content="A monthly envelope of original art, postcards, stickers, a fortune strip and a letter — mailed from Hội An, Vietnam.">
+  <meta property="og:image" content="https://floatingboob.com/art1.jpg">
+  <meta property="og:url" content="https://floatingboob.com">
+  <link rel="canonical" href="https://floatingboob.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #F7F3EC;
+      --ink: #1A1713;
+      --muted: #7A756C;
+      --border: #E0D9CF;
+      --accent: #C94B2A;
+      --accent-light: #F5EAE6;
+      --gold: #D4A017;
+      --gold-light: #FDF6E3;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.5rem 2.5rem;
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0;
+      background: var(--cream); z-index: 100;
+    }
+    .nav-logo { font-family: 'Instrument Serif', serif; font-size: 20px; color: var(--ink); text-decoration: none; }
+    .nav-cta {
+      background: var(--ink); color: var(--cream); text-decoration: none;
+      padding: 9px 22px; border-radius: 100px; font-size: 14px; font-weight: 500;
+      transition: opacity 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.8; }
+
+    /* HERO */
+    .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 90vh; border-bottom: 1px solid var(--border); }
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 5rem 4rem 5rem 2.5rem;
+      border-right: 1px solid var(--border);
+    }
+    .hero-tag {
+      display: inline-block; font-size: 12px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--accent); background: var(--accent-light);
+      border-radius: 100px; padding: 5px 16px; margin-bottom: 2rem; align-self: flex-start;
+    }
+    .hero h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(48px, 7vw, 80px);
+      line-height: 1.0; color: var(--ink); margin-bottom: 1.5rem; letter-spacing: -0.01em;
+    }
+    .hero h1 em { font-style: italic; color: var(--accent); }
+    .hero-desc { font-size: 17px; color: var(--muted); max-width: 380px; margin-bottom: 3rem; font-weight: 300; }
+    .hero-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+    .btn-primary {
+      display: inline-block; background: var(--ink); color: var(--cream);
+      text-decoration: none; padding: 16px 40px; border-radius: 100px;
+      font-size: 16px; font-weight: 500; transition: opacity 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
+    .hero-sub { font-size: 13px; color: var(--muted); }
+    .hero-right { overflow: hidden; background: #fff; }
+    .hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; transition: transform 0.6s ease; }
+    .hero-right:hover img { transform: scale(1.02); }
+
+    /* MARQUEE */
+    .marquee-wrap { border-bottom: 1px solid var(--border); overflow: hidden; padding: 14px 0; background: var(--ink); }
+    .marquee-track { display: flex; gap: 3rem; animation: marquee 18s linear infinite; white-space: nowrap; }
+    .marquee-track span { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 18px; color: var(--cream); opacity: 0.7; flex-shrink: 0; }
+    .marquee-track span.dot { color: var(--accent); font-style: normal; opacity: 1; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* SECTIONS */
+    .section { max-width: 900px; margin: 0 auto; padding: 5rem 2rem; }
+    .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+    .section h2 { font-family: 'Instrument Serif', serif; font-size: clamp(28px, 5vw, 44px); line-height: 1.15; margin-bottom: 3rem; color: var(--ink); }
+
+    /* GALLERY */
+    .gallery-grid {
+      display: grid; grid-template-columns: 1.2fr 1fr; grid-template-rows: 1fr 1fr;
+      gap: 1px; background: var(--border); border: 1px solid var(--border);
+      border-radius: 16px; overflow: hidden; min-height: 580px;
+    }
+    .gallery-item { overflow: hidden; background: #fff; }
+    .gallery-item.tall { grid-row: span 2; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+    .gallery-item:hover img { transform: scale(1.03); }
+    .gallery-caption { font-size: 13px; color: var(--muted); margin-top: 1rem; text-align: center; }
+
+    /* WHAT'S INSIDE */
+    .items-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1px; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+    .item-cell { background: #fff; padding: 2rem 1.5rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .item-cell:nth-child(even) { background: var(--cream); }
+    .item-num { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.75rem; }
+    .item-title { font-family: 'Instrument Serif', serif; font-size: 20px; color: var(--ink); margin-bottom: 0.5rem; }
+    .item-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+    /* GOLDEN FLOATING BOOB */
+    .golden-section {
+      background: var(--ink); color: var(--cream);
+      padding: 5rem 2rem;
+    }
+    .golden-inner {
+      max-width: 900px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+    }
+    .golden-left h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.1; margin-bottom: 1.5rem;
+      color: var(--gold);
+      font-style: italic;
+    }
+    .golden-left p { font-size: 16px; opacity: 0.75; line-height: 1.8; margin-bottom: 1rem; font-weight: 300; }
+    .golden-left p strong { color: var(--gold); font-weight: 500; opacity: 1; }
+    .golden-right {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(212,160,23,0.3);
+      border-radius: 20px; padding: 2.5rem;
+      text-align: center;
+    }
+    .golden-boob {
+      font-size: 72px; margin-bottom: 1.5rem; display: block;
+      filter: drop-shadow(0 0 20px rgba(212,160,23,0.4));
+    }
+    .golden-right h3 {
+      font-family: 'Instrument Serif', serif; font-style: italic;
+      font-size: 22px; color: var(--gold); margin-bottom: 1rem;
+    }
+    .golden-right p { font-size: 14px; opacity: 0.6; line-height: 1.7; }
+    .golden-tag {
+      display: inline-block; background: var(--gold); color: var(--ink);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 5px 14px; border-radius: 100px;
+      margin-top: 1.5rem;
+    }
+
+    /* ABOUT */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .about-text p { font-size: 17px; color: var(--muted); font-weight: 300; margin-bottom: 1.25rem; }
+    .about-text p strong { color: var(--ink); font-weight: 500; }
+    .about-card { background: var(--ink); border-radius: 20px; padding: 2.5rem 2rem; color: var(--cream); }
+    .about-card-label { font-size: 12px; opacity: 0.5; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+    .about-card-name { font-family: 'Instrument Serif', serif; font-size: 28px; margin-bottom: 0.5rem; }
+    .about-card-detail { font-size: 14px; opacity: 0.6; line-height: 1.6; }
+
+    /* PRICING */
+    .pricing-card {
+      background: #fff; border: 1px solid var(--border); border-radius: 20px; padding: 3rem;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;
+    }
+    .pricing-amount { font-family: 'Instrument Serif', serif; font-size: 64px; line-height: 1; color: var(--ink); }
+    .pricing-amount sup { font-size: 24px; vertical-align: super; }
+    .pricing-cadence { font-size: 14px; color: var(--muted); margin-top: 6px; }
+    .pricing-features { list-style: none; margin-top: 1.5rem; }
+    .pricing-features li { font-size: 14px; color: var(--muted); padding: 5px 0; display: flex; align-items: center; gap: 8px; }
+    .pricing-features li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+    .pricing-right { text-align: center; }
+    .btn-subscribe {
+      display: inline-block; background: var(--accent); color: #fff; text-decoration: none;
+      padding: 18px 44px; border-radius: 100px; font-size: 17px; font-weight: 500;
+      transition: opacity 0.2s, transform 0.15s; white-space: nowrap;
+    }
+    .btn-subscribe:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-try {
+      display: inline-block; background: transparent; color: var(--ink);
+      text-decoration: none; padding: 12px 32px; border-radius: 100px;
+      font-size: 14px; font-weight: 500; border: 1px solid var(--border);
+      transition: background 0.2s, transform 0.15s; white-space: nowrap;
+    }
+    .btn-try:hover { background: var(--cream); transform: translateY(-1px); }
+    .pricing-note { font-size: 12px; color: var(--muted); margin-top: 10px; }
+
+    hr.section-divider { border: none; border-top: 1px solid var(--border); max-width: 900px; margin: 0 auto; }
+
+    footer {
+      border-top: 1px solid var(--border); padding: 3rem 2.5rem;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-top: 5rem;
+    }
+    .footer-logo { font-family: 'Instrument Serif', serif; font-size: 18px; color: var(--ink); }
+    .footer-meta { font-size: 13px; color: var(--muted); line-height: 1.8; text-align: right; }
+
+    /* TESTIMONIALS */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .testimonial-card { background: #fff; border: 1px solid var(--border); border-radius: var(--border-radius-lg, 12px); padding: 1.75rem; }
+    .testimonial-text { font-family: 'Instrument Serif', serif; font-style: italic; font-size: 16px; color: var(--ink); line-height: 1.7; margin-bottom: 1rem; }
+    .testimonial-author { font-size: 12px; color: var(--muted); letter-spacing: 0.05em; }
+
+    /* GIFT */
+    .gift-card { background: var(--accent-light); border: 1px solid #E8C4B8; border-radius: 20px; padding: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .gift-icon { margin-bottom: 1rem; display: block; }
+    .gift-right { display: flex; flex-direction: column; }
+    .gift-details { display: flex; flex-direction: column; gap: 10px; margin-top: 0.5rem; }
+    .gift-detail-item { font-size: 14px; color: var(--ink); display: flex; align-items: center; gap: 8px; }
+    .gift-detail-item::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+    /* SHIPPING */
+    .shipping-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 1.5rem; }
+    .shipping-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 1.5rem; text-align: center; }
+    .shipping-icon { font-size: 24px; margin-bottom: 0.75rem; display: block; }
+    .shipping-region { font-weight: 500; font-size: 15px; color: var(--ink); margin-bottom: 4px; }
+    .shipping-time { font-family: 'Instrument Serif', serif; font-size: 22px; color: var(--accent); margin-bottom: 8px; }
+    .shipping-note { font-size: 12px; color: var(--muted); line-height: 1.5; }
+    .shipping-note-bar { background: var(--ink); color: var(--cream); border-radius: 12px; padding: 1rem 1.5rem; font-size: 13px; text-align: center; line-height: 1.8; opacity: 0.85; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+    .faq-item { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border); background: #fff; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item:nth-child(even) { background: var(--cream); }
+    .faq-q { font-weight: 500; font-size: 15px; color: var(--ink); margin-bottom: 0.5rem; }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.7; font-weight: 300; }
+
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 700px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 3rem 1.25rem; border-right: none; border-bottom: 1px solid var(--border); }
+      .hero-right { height: 80vw; }
+      .about-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; grid-template-rows: auto; min-height: auto; }
+      .gallery-item.tall { grid-row: span 1; }
+      .gallery-item { height: 70vw; }
+      .golden-inner { grid-template-columns: 1fr; gap: 2rem; }
+      nav { padding: 1rem 1.25rem; }
+      .section { padding: 3rem 1.25rem; }
+      .pricing-card { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+      .gift-card { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.5rem; }
+      .faq-item { padding: 1.25rem 1.25rem; }
+      footer { flex-direction: column; align-items: flex-start; }
+      .footer-meta { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div style="background:#1a1a1a; color:#faf6ee; text-align:center; padding:14px 20px; font-family:'Instrument Serif', serif; font-style:italic; font-size:16px; line-height:1.5; letter-spacing:0.01em;">
+    Welcome to <strong style="font-style:normal; color:#D4AF37;">Floating Boobs Print Club</strong> — the funniest print club out there right now, brought to you by a tattoo artist sending letters from Vietnam. 💌
+  </div>
+
+  <nav>
+    <a class="nav-logo" href="#">Floating Boobs</a>
+    <a class="nav-cta" href="https://buy.stripe.com/fZu28s2CI9Nw6rteHfcQU03" target="_blank">Subscribe — $12/mo</a>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-tag">Monthly snail mail · Hội An, Vietnam</div>
+      <h1>Art that <em>floats</em><br>to your door</h1>
+      <p class="hero-desc">A monthly envelope of original art, stickers, a postcard, an art print, a fortune strip, a mystery envelope and a letter — made by a tattoo artist in Vietnam and mailed to your door.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://buy.stripe.com/fZu28s2CI9Nw6rteHfcQU03" target="_blank">Subscribe for $12 / month</a>
+        <span class="hero-sub">Sign up by May 4th · Ships May 8th · Worldwide</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="studio_wide.jpg" alt="Floating Boobs studio — Hội An Vietnam">
+    </div>
+  </div>
+
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>original art print</span><span class="dot">·</span>
+      <span>postcard</span><span class="dot">·</span>
+      <span>stickers</span><span class="dot">·</span>
+      <span>fortune strip</span><span class="dot">·</span>
+      <span>the floating boobs times</span><span class="dot">·</span>
+      <span>mystery envelope — not for you</span><span class="dot">·</span>
+      <span>made in vietnam</span><span class="dot">·</span>
+      <span>ships worldwide</span><span class="dot">·</span>
+      <span>original art print</span><span class="dot">·</span>
+      <span>postcard</span><span class="dot">·</span>
+      <span>stickers</span><span class="dot">·</span>
+      <span>fortune strip</span><span class="dot">·</span>
+      <span>the floating boobs times</span><span class="dot">·</span>
+      <span>mystery envelope — not for you</span><span class="dot">·</span>
+      <span>made in vietnam</span><span class="dot">·</span>
+      <span>ships worldwide</span><span class="dot">·</span>
+    </div>
+  </div>
+
+  <section class="section fade-up">
+    <div class="section-label">The art</div>
+    <h2>What you're<br>actually getting</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item tall">
+        <img src="photo_flatlay.jpg" alt="What's inside a Floating Boobs envelope">
+      </div>
+      <div class="gallery-item">
+        <img src="ela_envelopes.jpg" alt="Couple with leopard">
+      </div>
+      <div class="gallery-item">
+        <img src="studio_wide.jpg" alt="Luchador with tattoos">
+      </div>
+    </div>
+    <p class="gallery-caption">New pieces every month — no two parcels are ever the same</p>
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="section fade-up">
+    <div class="section-label">What's inside</div>
+    <h2>Something different<br>every month</h2>
+    <div style="border-radius:16px; overflow:hidden; margin-bottom:2rem; max-height:420px;">
+      <img src="studio_desk.jpg" alt="Floating Boobs packing day — Hội An studio" style="width:100%; height:420px; object-fit:cover; object-position:center 30%; display:block;">
+    </div>
+    <div class="items-grid">
+      <div class="item-cell">
+        <div class="item-num">01</div>
+        <div class="item-title">Art print</div>
+        <div class="item-desc">An original illustration — bold, funny, made by hand. Something worth putting on your wall.</div>
+      </div>
+      <div class="item-cell">
+        <div class="item-num">02</div>
+        <div class="item-title">Postcard</div>
+        <div class="item-desc">A printed postcard featuring original artwork. Write on it. Send it. Frame it. Up to you.</div>
+      </div>
+      <div class="item-cell">
+        <div class="item-num">03</div>
+        <div class="item-title">Sticker</div>
+        <div class="item-desc">Illustrated, weird, and good. The kind you actually want to use.</div>
+      </div>
+      <div class="item-cell">
+        <div class="item-num">04</div>
+        <div class="item-title">Fortune strip</div>
+        <div class="item-desc">A monthly prediction. Specific, documented, entirely plausible. Keep an eye out.</div>
+      </div>
+      <div class="item-cell">
+        <div class="item-num">05</div>
+        <div class="item-title">A letter</div>
+        <div class="item-desc">Personal, funny, occasionally vulnerable. Written from my studio in Hội An.</div>
+      </div>
+      <div class="item-cell">
+        <div class="item-num">06</div>
+        <div class="item-title">A mystery envelope</div>
+        <div class="item-desc">A tiny sealed envelope tucked inside the big one. It's not for you. Instructions inside will tell you what to do with it. Don't open it yourself.</div>
+      </div>
+      <div class="item-cell">
+        <div class="item-num">07</div>
+        <div class="item-title">The Floating Boobs Times</div>
+        <div class="item-desc">A one-page newspaper written from Hội An. Breaking news. Reader reports. Fortune strip sightings. Updates on Pomelo the scooter. Fortune strip sightings. Everything that matters.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- GOLDEN FLOATING BOOB -->
+  <div class="golden-section">
+    <div class="golden-inner">
+      <div class="golden-left">
+        <h2>The<br>Golden Boob</h2>
+        <p>Every month, <strong>one random envelope</strong> contains a golden boob sticker. Hidden inside. No announcement. No pattern.</p>
+        <p>If you find it — you win a <strong>hand-drawn portrait in Floating Boobs style</strong>. Just you. You and your partner. Your whole family. Your best friend. Whoever matters most to you. Send a photo, get back an original drawing made just for you.</p>
+        <p>I believe in family, in strong unions, in friendship. The portrait can hold all of that.</p>
+        <p>One of a kind. Nobody else has one. Every envelope you open could be the one.</p>
+      </div>
+      <div class="golden-right">
+        <img src="golden_boob.png" alt="The Golden Boob" style="width:220px; height:220px; object-fit:contain; display:block; margin:0 auto 1.5rem auto; filter:drop-shadow(0 4px 16px rgba(212,175,55,0.7));">
+        <img src="portrait_example.jpg" alt="Example Golden Boob portrait" style="width:100%; border-radius:12px; display:block; margin-bottom:1rem;">
+        <h3>Find the sticker.<br>Win the portrait.</h3>
+        <p>You. Your partner. Your kids. Your best friend. Send a photo of whoever you want drawn — Ela draws them in Floating Boobs style. Original. Signed. Yours forever.</p>
+        <p style="font-size:12px; opacity:0.6; font-style:italic;">⚠️ Warning: your portrait might look funny. It's a real Floating Boobs piece — not a selfie.</p>
+        <span class="golden-tag">Monthly · Random · One Of A Kind</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="section fade-up">
+    <div class="section-label">About</div>
+    <div style="text-align:center; margin-bottom:2rem;">
+      <img src="ela_profile.jpg" alt="Ela — Floating Boobs" style="width:180px; height:180px; object-fit:cover; object-position:center 15%; border-radius:50%; border:3px solid var(--accent); display:inline-block;">
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm Ela. A Tattoo artist. A Poet. A Mom. A Traveler. A Burner. A Dreamer. Currently living in Hội An, Vietnam. And still and always in love with Mexico.</p>
+        <p>I believe in karma — and that's exactly why I'm selfishly sending out funny letters to the world. 😄 I also believe in meditation, Bitcoin, freedom, and love at first sight. And I will dance on your kitchen table just as hard as I have danced at Burning Man.</p>
+        <p>Maybe it's easier to say who I'm not. <strong>Boring. Shallow. A no-sayer.</strong></p>
+        <p>I'm on an adventure to make my life a piece of art — and this subscription is how I share that life with you. Every month I put a piece of my world into an envelope and mail it to your door. My drawings, my city, my thoughts, my weird observations. A letter from me to you.</p>
+        <p><strong>No algorithms. No feed. Just life, in letters.</strong></p>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+        <div style="border-radius:16px; overflow:hidden; aspect-ratio:3/4;">
+          <img src="ela_studio.jpg" alt="Ela in her studio — Floating Boobs" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;">
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <div style="border-radius:16px; overflow:hidden; flex:1;">
+            <img src="ela_envelopes.jpg" alt="Ela holding envelopes — Floating Boobs" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;">
+          </div>
+          <div style="background:var(--ink); border-radius:16px; padding:1.25rem; color:var(--cream);">
+            <div style="font-size:11px; opacity:0.5; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.5rem;">Your artist</div>
+            <div style="font-family:'Instrument Serif', serif; font-size:20px; margin-bottom:0.5rem;">Ela, aka @Floating_Boobs</div>
+            <div style="font-size:13px; opacity:0.6; line-height:1.6;">Hội An, Vietnam<br>floatingboob.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="section fade-up" id="subscribe">
+    <div class="section-label">Pricing</div>
+    <h2>One price.<br>No surprises.</h2>
+    <div class="pricing-card">
+      <div>
+        <div class="pricing-amount"><sup>$</sup>12</div>
+        <div class="pricing-cadence">per month · cancel anytime</div>
+        <ul class="pricing-features">
+          <li>Original art every single month</li>
+          <li>Postcard + sticker</li>
+          <li>Monthly fortune strip</li>
+          <li>A personal letter from me</li>
+          <li>A sealed mystery envelope from Hội An</li>
+          <li>The Floating Boobs Times — a one-page newspaper</li>
+          <li>A chance at the Golden Boob</li>
+          <li>Ships worldwide · Secure payment via Stripe</li>
+        </ul>
+      </div>
+      <div class="pricing-right">
+        <div style="display:inline-block; background:var(--accent-light); border:1px solid #E8C4B8; border-radius:100px; padding:6px 16px; font-size:13px; font-weight:500; color:var(--accent); margin-bottom:1rem;">⚡ Sign up closes May 4th</div>
+        <br>
+        <a class="btn-subscribe" href="https://buy.stripe.com/fZu28s2CI9Nw6rteHfcQU03" target="_blank">Subscribe now</a>
+        <p class="pricing-note">You'll be redirected to Stripe's secure checkout</p>
+        <div style="margin-top:1.25rem; background:var(--cream); border:1px solid var(--border); border-radius:12px; padding:1rem 1.25rem; font-size:13px; color:var(--muted); line-height:1.6;">
+          😶 <strong style="color:var(--ink);">Smile or cringe guarantee.</strong> If your first envelope makes you feel absolutely nothing — no smile, no cringe, not even a raised eyebrow — we'll refund you. That's the bar. First envelope only.
+        </div>
+        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+          <a class="btn-try" href="https://buy.stripe.com/00w14o2CIcZI3fh1UtcQU02" target="_blank">Try one envelope — $15</a>
+          <p class="pricing-note" style="margin-top: 8px;">One time · No subscription · No commitment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <hr class="section-divider">
+
+  <section class="section fade-up">
+    <div class="section-label">Monthly lucky postcard</div>
+    <h2>One person.<br>One original postcard.<br>On Dó paper.</h2>
+    <p style="font-size:16px; color:var(--muted); font-weight:300; max-width:560px; line-height:1.8; margin-bottom:1.5rem;">Every month one random subscriber receives an original Vietnamese art postcard on <strong>Dó paper</strong> — traditional handmade paper that has been crafted in Vietnam for over a thousand years. I found it here in Hội An. It's beautiful, it's real, and it's slipped into one lucky envelope with no announcement. You'll only know when you open it.</p>
+    <div style="background:var(--cream); border:1px solid var(--border); border-radius:16px; padding:1.5rem 2rem; max-width:480px; display:flex; flex-direction:column; gap:10px;">
+      <div style="font-size:14px; color:var(--ink); display:flex; align-items:center; gap:10px;"><span style="font-size:18px;">🌿</span> Original Vietnamese art postcard</div>
+      <div style="font-size:14px; color:var(--ink); display:flex; align-items:center; gap:10px;"><span style="font-size:18px;">📜</span> Printed on traditional Dó paper — handmade in Vietnam</div>
+      <div style="font-size:14px; color:var(--ink); display:flex; align-items:center; gap:10px;"><span style="font-size:18px;">🎲</span> One random subscriber per month</div>
+      <div style="font-size:14px; color:var(--ink); display:flex; align-items:center; gap:10px;"><span style="font-size:18px;">🤫</span> No announcement — you find out when you open your envelope</div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section fade-up">
+    <div class="section-label">What subscribers say</div>
+    <h2>Real people.<br>Real mail.</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-text">"I opened it and just sat there for a minute. It felt like someone actually thought about me. Which sounds dramatic but that's what happened."</p>
+        <div class="testimonial-author">— Early subscriber, Germany</div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"The fortune strip predicted I would see a suspicious pigeon. I saw one the next day. I'm not saying anything, I'm just saying."</p>
+        <div class="testimonial-author">— Subscriber, USA</div>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-text">"The art is genuinely good. Like, I-put-it-on-my-wall good. Not I'll-keep-it-in-a-drawer good."</p>
+        <div class="testimonial-author">— Subscriber, Australia</div>
+      </div>
+    </div>
+    <p style="font-size:13px; color:var(--muted); text-align:center; margin-top:1.5rem;">More reactions coming as envelopes land. Watch this space.</p>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- GIFT CALLOUT -->
+  <section class="section fade-up">
+    <div class="gift-card">
+      <div class="gift-left">
+        <div class="section-label">Give it as a gift</div>
+        <h2 style="margin-bottom:1rem;">The person who<br>has everything<br><em>doesn't have this.</em></h2>
+        <p style="font-size:15px; color:var(--muted); font-weight:300; max-width:360px; line-height:1.8;">A monthly envelope of original art from Vietnam. Weird, funny, handmade. Something they'll actually remember getting.</p>
+        <p style="font-size:13px; color:var(--muted); margin-top:1rem;">At checkout, add the recipient's name and their mailing address. We'll send it straight to them — no wrapping required.</p>
+      </div>
+      <div class="gift-right">
+        <div class="gift-icon">
+<svg width="80" height="90" viewBox="190 20 300 360" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+<style>.sk{fill:none;stroke:#1a1a1a;stroke-linecap:round;stroke-linejoin:round}.skf{fill:#1a1a1a;stroke:#1a1a1a;stroke-linecap:round;stroke-linejoin:round}</style>
+<g transform="translate(190, 20)">
+<path class="sk" stroke-width="3.5" d="M 30 80 L 270 75 L 295 105 L 48 112 Z"/>
+<path class="sk" stroke-width="3.5" d="M 48 112 L 295 105 L 290 290 L 44 298 Z"/>
+<path class="sk" stroke-width="3.5" d="M 270 75 L 295 105 L 290 110 L 265 82 Z"/>
+<path class="sk" stroke-width="4" d="M 163 112 C 160 160, 167 220, 162 298"/>
+<path class="sk" stroke-width="4" d="M 48 198 C 110 193, 200 205, 290 196"/>
+<path class="sk" stroke-width="4" d="M 155 75 C 158 88, 163 100, 163 112"/>
+<path class="sk" stroke-width="4" d="M 30 93 C 90 89, 200 87, 270 90"/>
+<path class="sk" stroke-width="3.5" d="M 163 72 C 120 30, 75 18, 95 55 C 108 78, 145 72, 163 72"/>
+<path class="sk" stroke-width="3.5" d="M 163 72 C 205 28, 248 16, 230 56 C 218 80, 175 70, 163 72"/>
+<path class="sk" stroke-width="3" d="M 163 72 C 145 65, 118 75, 105 90"/>
+<path class="sk" stroke-width="3" d="M 163 72 C 178 65, 205 77, 215 92"/>
+<ellipse class="skf" cx="163" cy="72" rx="10" ry="8" stroke-width="2"/>
+<path class="sk" stroke-width="2.5" d="M 50 45 L 53 38 L 56 45 M 53 41 L 46 44 L 60 44"/>
+<path class="sk" stroke-width="2.5" d="M 268 52 L 271 45 L 274 52 M 271 48 L 264 51 L 278 51"/>
+<path class="sk" stroke-width="2.5" fill="none" d="M 240 35 C 240 30, 233 28, 233 34 C 233 39, 240 44, 240 44 C 240 44, 247 39, 247 34 C 247 28, 240 30, 240 35"/>
+</g>
+</svg>
+</div>
+        <div class="gift-details">
+          <div class="gift-detail-item">Ships directly to them</div>
+          <div class="gift-detail-item">Cancel or pause anytime</div>
+          <div class="gift-detail-item">No gift wrap needed</div>
+          <div class="gift-detail-item">Arrives from Vietnam — that's the story</div>
+        </div>
+        <a class="btn-primary" style="margin-top:1.5rem; align-self:flex-start;" href="https://buy.stripe.com/fZu28s2CI9Nw6rteHfcQU03" target="_blank">Give as a gift</a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- SHIPPING INFO -->
+  <section class="section fade-up">
+    <div class="section-label">Shipping</div>
+    <h2>Honest about<br>how mail works.</h2>
+    <div style="display:flex; justify-content:center; margin-bottom:1.5rem;">
+      <div class="shipping-card" style="max-width:360px; width:100%; text-align:center;">
+        <div class="shipping-icon">✈️</div>
+        <div class="shipping-region">Worldwide</div>
+        <div class="shipping-time">2–3 weeks</div>
+        <div class="shipping-note">Vietnam Post airmail to all destinations — Europe, USA, Australia, everywhere. Same wait, same care, same Pomelo.</div>
+      </div>
+    </div>
+    <div class="shipping-note-bar">
+      Sent via Vietnam Post airmail · No tracking to keep costs low · Delivery takes 2–3 weeks worldwide · If your envelope hasn't arrived after 4 weeks, contact us and we'll sort it out.
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- FAQ -->
+  <section class="section fade-up">
+    <div class="section-label">FAQ</div>
+    <h2>Questions.<br>Answered.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Can I try just one envelope before subscribing?</div>
+        <div class="faq-a">Yes — the "Try one envelope" option gets you a single one-off envelope for $15. No subscription, no commitment. If you love it, subscribe from the next month.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">When does my first envelope ship?</div>
+        <div class="faq-a">Sign up by May 4th and your first envelope ships May 8th. After that, sign up by the 15th of each month and your envelope ships by the 25th. Delivery takes 2–3 weeks worldwide.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is there tracking?</div>
+        <div class="faq-a">No tracking — it keeps costs down and honestly, waiting without knowing is more fun. You'll get a message from us on shipping day so you know it's on its way.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if it doesn't arrive?</div>
+        <div class="faq-a">If your envelope hasn't arrived after 6 weeks, contact us. We'll resend. It's rare but it happens and we'll always make it right.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I cancel?</div>
+        <div class="faq-a">Yes, anytime. No awkward emails, no guilt trips. Cancel through your Stripe customer portal before your next billing date.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I send it as a gift?</div>
+        <div class="faq-a">Absolutely. At checkout add the recipient's name and their address. It ships directly to them every month.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the mystery envelope?</div>
+        <div class="faq-a">A tiny sealed envelope inside the main one — but it's not for you. Instructions inside will tell you what to do with it. Give it to someone. Leave it somewhere. Pass it on. Don't open it yourself. That's the whole point.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the Dó paper postcard?</div>
+        <div class="faq-a">Every month one random subscriber receives an original Vietnamese art postcard on Dó paper — traditional handmade paper crafted in Vietnam for over a thousand years. Ela found it in Hội An. It's slipped into one lucky envelope with no announcement. You find out when you open it.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the Golden Boob?</div>
+        <div class="faq-a">Every month one random envelope contains a golden boob sticker. Find it and you win a hand-drawn portrait in Floating Boobs style — just you, you and your partner, your family, your best friend, whoever you want. Send Ela a photo and she draws them. Original, signed, one of a kind. Warning: it might look funny. It's a real Floating Boobs piece — not a selfie. No pattern, no announcement. You'll know when you find it.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is the art different every month?</div>
+        <div class="faq-a">Yes. New print, new postcard, new sticker, new bookmark, new fortune strip every single month. No repeats.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Floating Boobs</div>
+    <div class="footer-meta">
+      Made with love (and ink) in Hội An, Vietnam<br>
+      Real art. Real postage. Real boobs — the floating kind.<br>
+      floatingboob.com
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
