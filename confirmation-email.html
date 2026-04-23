@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're in — Floating Boobs Print Club</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Lora',Georgia,serif;background:#e8e4d8;display:flex;justify-content:center;align-items:flex-start;min-height:100vh;padding:40px 16px;}
+.email-wrap{max-width:600px;width:100%;border:2px solid #0d0d0d;background:#f5f0e8;}
+.email-header{background:#0d0d0d;padding:14px 24px;text-align:center;}
+.email-header span{font-family:'Bebas Neue',sans-serif;font-size:22px;color:#f5f0e8;letter-spacing:3px;}
+.email-top{display:flex;align-items:stretch;border-bottom:2px solid #0d0d0d;}
+.email-photo{width:200px;flex-shrink:0;border-right:2px solid #0d0d0d;overflow:hidden;}
+.email-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.email-intro{padding:24px;flex:1;}
+.label{font-size:11px;letter-spacing:3px;color:#c9281a;font-family:sans-serif;margin:0 0 8px;}
+.email-intro h1{font-size:20px;font-family:'Lora',Georgia,serif;font-weight:bold;margin:0 0 12px;color:#0d0d0d;line-height:1.2;}
+.email-intro p{font-size:13px;color:#333;line-height:1.7;margin:0;}
+.email-inside{padding:24px;border-bottom:2px solid #0d0d0d;}
+.items-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid #0d0d0d;margin-top:14px;}
+.item{padding:10px 14px;border-bottom:1px solid #ccc;font-size:12px;color:#333;line-height:1.5;}
+.item:nth-child(odd){border-right:1px solid #ccc;}
+.item:nth-child(even){background:#ede8dc;}
+.item.full{grid-column:span 2;border-bottom:none;background:#ede8dc;}
+.item span{color:#c9281a;font-weight:bold;margin-right:4px;}
+.email-shipping{padding:20px 24px;border-bottom:2px solid #0d0d0d;background:#ede8dc;}
+.email-shipping p{font-size:12px;color:#555;line-height:1.8;margin:0;}
+.email-footer{padding:20px 24px;}
+.email-footer p{font-size:12px;color:#555;line-height:1.8;margin:0 0 12px;}
+.email-footer a{color:#0d0d0d;font-weight:bold;}
+.email-signoff{margin:20px 0 0;font-size:13px;color:#0d0d0d;font-style:italic;line-height:1.8;}
+.email-signoff .name{font-size:11px;color:#888;font-style:normal;letter-spacing:1px;}
+
+@media(max-width:500px){
+  .email-top{flex-direction:column;}
+  .email-photo{width:100%;height:220px;border-right:none;border-bottom:2px solid #0d0d0d;}
+  .items-grid{grid-template-columns:1fr;}
+  .item{border-right:none!important;}
+  .item.full{grid-column:span 1;}
+}
+</style>
+</head>
+<body>
+<div class="email-wrap">
+
+  <div class="email-header">
+    <span>FLOATING BOOBS PRINT CLUB</span>
+  </div>
+
+  <div class="email-top">
+    <div class="email-photo">
+      <img src="IMG_2601.jpeg" alt="Ela's studio in Hội An" />
+    </div>
+    <div class="email-intro">
+      <p class="label">SUBSCRIPTION CONFIRMED</p>
+      <h1>You're in. Your envelope is on its way. 🛵</h1>
+      <p>Hey [Name]! Just wanted to personally confirm — you're subscribed to Floating Boobs Print Club. Your first envelope ships <strong>May 8th</strong> from Hội An, Vietnam.</p>
+    </div>
+  </div>
+
+  <div class="email-inside">
+    <p class="label">WHAT'S INSIDE YOUR ENVELOPE</p>
+    <div class="items-grid">
+      <div class="item"><span>→</span> Original art print (hand drawn by Ela)</div>
+      <div class="item"><span>→</span> A postcard</div>
+      <div class="item"><span>→</span> A sticker</div>
+      <div class="item"><span>→</span> A fortune strip</div>
+      <div class="item"><span>→</span> A handwritten letter from Vietnam</div>
+      <div class="item"><span>→</span> A mystery envelope (not for you)</div>
+      <div class="item full"><span>→</span> The Floating Boobs Times — Ela's B&W newspaper from Hội An</div>
+    </div>
+  </div>
+
+  <div class="email-shipping">
+    <p>Delivery takes <strong>2–3 weeks worldwide</strong> via Vietnam Post airmail. No tracking, but I'll message you on shipping day so you know it's on its way. If your envelope hasn't arrived after 6 weeks, reply to this email and I'll sort it out.</p>
+  </div>
+
+  <div class="email-footer">
+    <p>Need to manage or cancel your subscription? <a href="https://billing.stripe.com/p/login/fZu9AU0uA8Js7vxcz7cQU00">Click here →</a></p>
+    <p>Or just reply to this email — I'm a real person and I read everything.</p>
+    <p class="email-signoff">
+      Can't wait to send you something weird and wonderful.<br><br>
+      Ela<br>
+      <span class="name">FLOATING BOOBS PRINT CLUB · HỘI AN, VIETNAM · floatingboobs69@gmail.com</span>
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
