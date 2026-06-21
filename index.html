@@ -94,7 +94,7 @@ hr{border:none;border-top:3px solid var(--black);max-width:960px;margin:0 auto;}
 
 /* GOLDEN */
 .golden-section{background:var(--black);padding:5rem 2rem;}
-.golden-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.golden-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
 .golden-left h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,5.5vw,68px);line-height:0.9;letter-spacing:2px;color:var(--gold);margin-bottom:2rem;white-space:nowrap;}
 .golden-left p{font-size:15px;color:rgba(255,255,255,0.75);line-height:1.9;margin-bottom:1rem;font-family:'Lora',Georgia,serif;}
 .golden-left p strong{color:var(--gold);}
@@ -256,6 +256,7 @@ footer{border-top:3px solid var(--black);padding:2.5rem;display:flex;justify-con
 
 /* product hero (gallery + buy box) */
 .product-hero{display:grid;grid-template-columns:1.05fr 1fr;border-bottom:3px solid var(--black);align-items:stretch;}
+.mobile-hero-title{display:none;}
 .product-gallery{padding:1.5rem;background:var(--white);display:flex;flex-direction:column;justify-content:center;}
 .product-gallery .slideshow-wrap{max-width:600px;}
 .product-buybox{padding:2rem 2.5rem;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;text-align:left;background:var(--white);}
@@ -276,6 +277,9 @@ footer{border-top:3px solid var(--black);padding:2.5rem;display:flex;justify-con
   .product-hero{grid-template-columns:1fr;}
   .product-gallery{padding:0.75rem;}
   .product-buybox{padding:0.5rem 1.25rem 2rem;align-items:center;text-align:center;}
+  .mobile-hero-title{display:block;font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,9.5vw,58px);line-height:0.95;letter-spacing:1px;color:var(--black);text-align:center;white-space:nowrap;padding:0.4rem 0.5rem 0.2rem;}
+  .mobile-hero-title em{color:var(--red);font-style:normal;}
+  .product-buybox h1{display:none;}
   .product-buybox .btn-subscribe,.product-buybox .btn-try{align-self:center;}
   .product-buybox .hero-social{justify-content:center;}
 }
@@ -320,15 +324,16 @@ src='https://www.facebook.com/tr?id=4510568505845101&ev=PageView&noscript=1'
 
 <!-- PRODUCT HERO (gallery + buy box) -->
 <div class="product-hero">
+  <div class="mobile-hero-title">Floating <em>Boobs</em> Post</div>
   <div class="product-gallery">
     <div class="slideshow-wrap">
       <div class="slideshow-row">
         <button class="side-arrow side-left" onclick="slideA('ss-main',-1)" aria-label="Previous slide">&#8249;</button>
         <div id="ss-main" class="slideshow-frame">
           <div class="slides">
-          <div><img src="May.JPG" alt="What's inside each envelope — annotated breakdown"></div>
           <div><img src="July_actual.JPG" alt="July's letter — full envelope reveal"></div>
           <div><img src="June.JPG" alt="June's letter — full envelope reveal"></div>
+          <div><img src="May.JPG" alt="What's inside each envelope — annotated breakdown"></div>
           <div><img src="August_reveal.JPG" alt="August's envelope — contents revealed soon"></div>
           <div><video src="Video.MP4" muted loop playsinline autoplay preload="auto"></video></div>
         </div>
