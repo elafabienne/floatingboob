@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Floating Post — a piece of Vietnam in your mailbox, once a month</title>
+<meta name="description" content="A monthly hand-made art envelope mailed from Hội An, Vietnam by a tattoo artist. Get a free fortune to start.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<!-- Facebook Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','4510568505845101');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=4510568505845101&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel -->
+<style>
+:root{--paper:#FAF4E6;--paper2:#F1E6CC;--ink:#1B1714;--soft:#5A5048;--red:#C8362B;--blue:#234A8A;--gold:#BE9A2E;--max:1080px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{overflow-x:clip;}
+body{font-family:'Lora',Georgia,serif;background:var(--paper);color:var(--ink);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+@supports(padding: max(0px)){
+  body{padding-left:max(0px, env(safe-area-inset-left));padding-right:max(0px, env(safe-area-inset-right));}
+}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+h1,h2{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;line-height:.9;letter-spacing:.012em;}
+h1{font-size:clamp(3.4rem,9.5vw,6.4rem);}
+h2{font-size:clamp(2.2rem,5vw,3.4rem);}
+@media(max-width:600px){
+  h1{font-size:clamp(2.4rem,8vw,3.4rem);}
+  .eyebrow{letter-spacing:.12em;}
+}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 48px;}
+@media(max-width:860px){.wrap{padding:0 32px;}}
+@media(max-width:600px){.wrap{padding:0 32px;}}
+@media(max-width:400px){.wrap{padding:0 28px;}}
+.eyebrow{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--red);font-weight:700;}
+.hand{font-family:'Caveat',cursive;}
+
+.airmail{height:9px;background:repeating-linear-gradient(45deg,var(--red) 0 13px,var(--paper) 13px 26px,var(--blue) 26px 39px,var(--paper) 39px 52px);}
+
+/* nav */
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 48px;max-width:var(--max);margin:0 auto;}
+@media(max-width:860px){nav{padding:16px 32px;}}
+@media(max-width:600px){nav{padding:14px 32px;}}
+@media(max-width:400px){nav{padding:12px 28px;}}
+.wordmark{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.05em;text-decoration:none;line-height:1;}
+.wordmark small{display:block;font-family:'Space Mono',monospace;font-size:.5rem;letter-spacing:.16em;color:var(--soft);text-transform:uppercase;margin-top:2px;}
+.linkcta{font-family:'Space Mono',monospace;font-weight:700;font-size:.82rem;letter-spacing:.04em;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:2px;}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4em;font-family:'Bebas Neue',sans-serif;font-size:1.45rem;letter-spacing:.03em;text-decoration:none;cursor:pointer;border:2.5px solid var(--ink);padding:15px 30px;border-radius:4px;background:var(--paper);color:var(--ink);transition:transform .12s,box-shadow .12s;box-shadow:4px 4px 0 var(--ink);}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink);}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.btn:focus-visible{outline:3px solid var(--blue);outline-offset:3px;}
+.btn--red{background:var(--red);color:#fff;}
+.btn--gold{background:var(--gold);color:var(--ink);font-size:1.6rem;padding:16px 32px;}
+.btn-sub{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.05em;color:var(--soft);margin-top:8px;text-transform:uppercase;}
+
+/* hero */
+.hero{padding-top:40px;padding-bottom:60px;}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center;}
+.hero h1 .red{color:var(--red);}
+.hero-lead{font-size:1.22rem;line-height:1.5;max-width:34ch;margin:.45em 0 1.2em;}
+
+/* envelope capture (signature) */
+.envelope{position:relative;background:#fff;border:2.5px solid var(--ink);border-radius:5px;box-shadow:7px 7px 0 var(--ink);padding:22px;max-width:480px;}
+.envelope::before{content:"";position:absolute;inset:7px;border:1.5px dashed rgba(27,23,20,.25);border-radius:3px;pointer-events:none;}
+.env-stamp{position:absolute;top:-14px;right:18px;width:62px;height:74px;background:var(--red);color:#fff;border:2px dashed #fff;outline:2.5px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(4deg);font-family:'Bebas Neue',sans-serif;line-height:.85;text-align:center;}
+.env-stamp b{font-size:1.5rem;}
+.env-stamp span{font-family:'Space Mono',monospace;font-size:.42rem;letter-spacing:.1em;margin-top:3px;}
+.env-label{font-family:'Caveat',cursive;font-size:1.5rem;margin-bottom:10px;}
+.hero-secondary{margin-top:16px;font-size:.98rem;}
+.hero-secondary a{color:var(--red);font-weight:600;text-decoration:underline;text-underline-offset:3px;}
+
+.hero-img-wrap{position:relative;}
+.hero-img{border:3px solid var(--ink);box-shadow:10px 10px 0 var(--ink);width:100%;object-fit:cover;}
+.hero-tag{position:absolute;bottom:-15px;left:-12px;background:var(--paper);border:2.5px solid var(--ink);font-family:'Space Mono',monospace;font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:7px 11px;transform:rotate(-2deg);}
+.postmark{position:absolute;top:-26px;right:-14px;width:112px;height:112px;transform:rotate(8deg);}
+.postmark text{font-family:'Space Mono',monospace;font-weight:700;fill:var(--blue);}
+
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:28px;}
+  .hero-img-wrap{order:-1;max-width:440px;margin:0 auto;}
+  .hero-img{max-height:42vh;object-position:center 20%;}
+  .postmark{right:6px;top:-22px;}
+  .hero-lead{max-width:none;}
+}
+@media(max-width:560px){
+  body{font-size:17px;}
+  .hero{padding:28px 0 48px;}
+  .hero-lead{font-size:1.05rem;word-break:break-word;overflow-wrap:break-word;}
+  .net-form .btn{width:100%;}
+  .net-form input{min-width:0;width:100%;}
+  .net-form{flex-direction:column;}
+  .envelope{padding:18px 16px;}
+  .btn{padding:14px 20px;}
+  .btn--gold{font-size:1.3rem;padding:14px 20px;}
+}
+
+/* price */
+.pricing{background:var(--blue);color:var(--paper);padding:70px 0;}
+.price-card{max-width:720px;margin:0 auto;background:var(--paper);color:var(--ink);border-radius:6px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;box-shadow:8px 8px 0 rgba(0,0,0,.35);}
+.price-left{padding:32px 28px;}
+.price-amt{font-family:'Bebas Neue',sans-serif;font-size:5.2rem;line-height:.8;}
+.price-amt sup{font-size:1.9rem;vertical-align:super;}
+.price-cad{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin-top:6px;}
+.price-feat{list-style:none;margin-top:16px;}
+.price-feat li{font-size:.95rem;padding:7px 0;border-bottom:1px dotted var(--ink);display:flex;gap:10px;}
+.price-feat li::before{content:"✶";color:var(--gold);}
+.price-right{padding:32px 28px;background:var(--paper2);border-left:3px solid var(--ink);text-align:center;display:flex;flex-direction:column;justify-content:center;}
+.badge{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red);border:2px solid var(--red);padding:5px 10px;display:inline-block;margin:0 auto 16px;border-radius:3px;}
+.guarantee{margin-top:16px;border-left:3px solid var(--gold);padding-left:14px;font-size:.9rem;text-align:left;}
+.price-try{margin-top:16px;padding-top:16px;border-top:2px solid var(--ink);}
+@media(max-width:680px){.price-card{grid-template-columns:1fr;}.price-right{border-left:none;border-top:3px solid var(--ink);}.price-amt{font-size:4.2rem;}}
+@media(max-width:480px){.price-left{padding:24px 18px;}.price-right{padding:24px 18px;}}
+
+footer{background:var(--blue);color:var(--paper);text-align:center;padding:40px 24px;font-size:.9rem;}
+@media(max-width:480px){footer{padding:32px 20px;}}
+footer a{color:var(--gold);text-decoration:none;}
+footer .fw{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.04em;}
+.social{display:inline-flex;gap:18px;font-family:'Space Mono',monospace;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;margin-top:12px;}
+@media(prefers-reduced-motion:reduce){.btn{transition:none;}}
+</style>
+</head>
+<body>
+
+<div class="airmail" aria-hidden="true"></div>
+<nav>
+  <a href="#top" class="wordmark">Floating Post<small>aka floating boobs post · hội an</small></a>
+</nav>
+
+<!-- HERO + EMAIL NET -->
+<header class="hero wrap" id="top">
+  <div class="hero-grid">
+    <div>
+      <span class="eyebrow">Hội An, Vietnam → your mailbox</span>
+      <h1>i mail strangers<br>a piece of <span class="red">vietnam.</span></h1>
+      <p class="hero-lead">I fell in love with Vietnam — so I started mailing pieces of it to strangers across the world. Once a month an envelope leaves Hội An for your mailbox: handmade, sent slow, and it still smells a little like here. A piece of a place you just haven't been to yet.</p>
+
+      <a class="btn btn--gold" href="https://buy.stripe.com/8x2aEYgty7Fo4jleHfcQU04" target="_blank" data-checkout="subscribe-hero">Subscribe — $15/mo →</a>
+      <div style="font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.04em;color:var(--soft);margin-top:12px;text-transform:uppercase;">ships worldwide · cancel anytime · sign up by the 15th</div>
+
+    </div>
+
+    <div class="hero-img-wrap">
+      <svg class="postmark" viewBox="0 0 118 118" aria-hidden="true">
+        <circle cx="59" cy="59" r="55" fill="none" stroke="var(--blue)" stroke-width="2"/>
+        <circle cx="59" cy="59" r="40" fill="none" stroke="var(--blue)" stroke-width="1.4"/>
+        <path id="pmtop" d="M59,59 m-47,0 a47,47 0 0,1 94,0" fill="none"/>
+        <text font-size="9" letter-spacing="2"><textPath href="#pmtop" startOffset="50%" text-anchor="middle">HỘI AN ✶ VIỆT NAM</textPath></text>
+        <text x="59" y="55" font-size="11" text-anchor="middle">PAR</text>
+        <text x="59" y="68" font-size="11" text-anchor="middle">AVION</text>
+        <text x="59" y="86" font-size="6.5" text-anchor="middle" letter-spacing="1.5">MONTHLY</text>
+      </svg>
+      <img class="hero-img" src="hero_top.jpg" alt="Ela holding a stack of orange envelopes in her Hội An studio" loading="eager">
+      <span class="hero-tag">made by these hands ✶ not a machine</span>
+    </div>
+  </div>
+</header>
+
+<!-- FEELING BEAT — make them want it before the price -->
+<section style="background:var(--paper2);padding:64px 0;">
+  <div class="wrap" style="max-width:680px;text-align:center;">
+    <span class="eyebrow">why people keep it</span>
+    <h2 style="margin:10px 0 18px;">it still smells<br>like vietnam.</h2>
+    <p style="font-size:1.18rem;line-height:1.62;">An envelope from a little post office in Hội An, with your name on it — heat, ink, and paper of a place you haven't been to yet.</p>
+    <p style="font-size:1.18rem;line-height:1.62;">And tucked inside: one small sealed thing you're <em>not allowed to open</em>. It's not for you. 🤫</p>
+  </div>
+</section>
+
+
+
+<!-- PRICE -->
+<section class="pricing" id="subscribe">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:30px;">
+      <span class="eyebrow" style="color:var(--gold);">one envelope a month</span>
+      <h2 style="color:var(--paper);margin-top:8px;">a piece of vietnam,<br>wherever you are.</h2>
+    </div>
+    <div class="price-card">
+      <div class="price-left">
+        <div class="price-amt"><sup>$</sup>15</div>
+        <div class="price-cad">free worldwide shipping · cancel anytime</div>
+        <ul class="price-feat">
+          <li>an original art print, every month</li>
+          <li>a personal letter from hội an</li>
+          <li>the sealed mystery envelope</li>
+          <li>+ rotating surprises</li>
+        </ul>
+      </div>
+      <div class="price-right">
+        <span class="badge">⚡ sign up by the 15th for this month's send</span>
+        <a class="btn btn--gold" href="https://buy.stripe.com/8x2aEYgty7Fo4jleHfcQU04" target="_blank" data-checkout="subscribe">Subscribe — $15/mo →</a>
+        <span class="btn-sub">secure stripe checkout · cancel anytime</span>
+        <div class="price-try" style="display:flex;flex-direction:column;align-items:center;">
+          <a class="btn" href="https://buy.stripe.com/cNi28selq1h04jlcz7cQU05" target="_blank" data-checkout="trial">Not sure? Send one — $18</a>
+          <span class="btn-sub" style="margin-top:8px;">one-time · no subscription</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="fw">Floating Post</div>
+  <p style="margin-top:10px;">made with love (and ink) in hội an, vietnam · officially floating boobs post</p>
+  <p><a href="https://floatingboobs.com">floatingboobs.com</a> · <a href="mailto:floatingboobs69@gmail.com">floatingboobs69@gmail.com</a></p>
+  <div class="social">
+    <a href="https://instagram.com/floatingpost" target="_blank">@floatingpost</a>
+    <a href="https://tiktok.com/@floating.post" target="_blank">@floating.post</a>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-checkout]').forEach(function(el){
+    el.addEventListener('click',function(){ if(window.fbq) fbq('track','InitiateCheckout',{content_name:el.getAttribute('data-checkout')}); });
+  });
+</script>
+</body>
+</html>
