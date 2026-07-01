@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Floating Post — a piece of Vietnam in your mailbox, once a month</title>
+<meta name="description" content="A monthly hand-made art envelope mailed from Hội An, Vietnam by a tattoo artist. Get a free fortune to start.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<!-- Facebook Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','4510568505845101');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=4510568505845101&ev=PageView&noscript=1"/></noscript>
+<!-- End Facebook Pixel -->
+<style>
+:root{--paper:#FAF4E6;--paper2:#F1E6CC;--ink:#1B1714;--soft:#5A5048;--red:#C8362B;--blue:#234A8A;--gold:#BE9A2E;--max:1080px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{overflow-x:clip;}
+body{font-family:'Lora',Georgia,serif;background:var(--paper);color:var(--ink);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+@supports(padding: max(0px)){
+  body{padding-left:max(0px, env(safe-area-inset-left));padding-right:max(0px, env(safe-area-inset-right));}
+}
+img{max-width:100%;display:block;}
+a{color:inherit;}
+h1,h2{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;line-height:.9;letter-spacing:.012em;}
+h1{font-size:clamp(3.4rem,9.5vw,6.4rem);}
+h2{font-size:clamp(2.2rem,5vw,3.4rem);}
+@media(max-width:600px){
+  h1{font-size:clamp(2.4rem,8vw,3.4rem);}
+  .eyebrow{letter-spacing:.12em;}
+}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 48px;}
+@media(max-width:860px){.wrap{padding:0 32px;}}
+@media(max-width:600px){.wrap{padding:0 32px;}}
+@media(max-width:400px){.wrap{padding:0 28px;}}
+.eyebrow{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--red);font-weight:700;}
+.hand{font-family:'Caveat',cursive;}
+
+.airmail{height:9px;background:repeating-linear-gradient(45deg,var(--red) 0 13px,var(--paper) 13px 26px,var(--blue) 26px 39px,var(--paper) 39px 52px);}
+
+/* nav */
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 48px;max-width:var(--max);margin:0 auto;}
+@media(max-width:860px){nav{padding:16px 32px;}}
+@media(max-width:600px){nav{padding:14px 32px;}}
+@media(max-width:400px){nav{padding:12px 28px;}}
+.wordmark{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.05em;text-decoration:none;line-height:1;}
+.wordmark small{display:block;font-family:'Space Mono',monospace;font-size:.5rem;letter-spacing:.16em;color:var(--soft);text-transform:uppercase;margin-top:2px;}
+.linkcta{font-family:'Space Mono',monospace;font-weight:700;font-size:.82rem;letter-spacing:.04em;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:2px;}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4em;font-family:'Bebas Neue',sans-serif;font-size:1.45rem;letter-spacing:.03em;text-decoration:none;cursor:pointer;border:2.5px solid var(--ink);padding:15px 30px;border-radius:4px;background:var(--paper);color:var(--ink);transition:transform .12s,box-shadow .12s;box-shadow:4px 4px 0 var(--ink);}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink);}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink);}
+.btn:focus-visible{outline:3px solid var(--blue);outline-offset:3px;}
+.btn--red{background:var(--red);color:#fff;}
+.btn--gold{background:var(--gold);color:var(--ink);font-size:1.6rem;padding:16px 32px;}
+.btn-sub{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.05em;color:var(--soft);margin-top:8px;text-transform:uppercase;}
+
+/* hero */
+.hero{padding-top:40px;padding-bottom:60px;}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center;}
+.hero h1 .red{color:var(--red);}
+.hero-lead{font-size:1.22rem;line-height:1.5;max-width:34ch;margin:.45em 0 1.2em;}
+
+/* envelope capture (signature) */
+.envelope{position:relative;background:#fff;border:2.5px solid var(--ink);border-radius:5px;box-shadow:7px 7px 0 var(--ink);padding:22px;max-width:480px;}
+.envelope::before{content:"";position:absolute;inset:7px;border:1.5px dashed rgba(27,23,20,.25);border-radius:3px;pointer-events:none;}
+.env-stamp{position:absolute;top:-14px;right:18px;width:62px;height:74px;background:var(--red);color:#fff;border:2px dashed #fff;outline:2.5px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(4deg);font-family:'Bebas Neue',sans-serif;line-height:.85;text-align:center;}
+.env-stamp b{font-size:1.5rem;}
+.env-stamp span{font-family:'Space Mono',monospace;font-size:.42rem;letter-spacing:.1em;margin-top:3px;}
+.env-label{font-family:'Caveat',cursive;font-size:1.5rem;margin-bottom:10px;}
+.hero-secondary{margin-top:16px;font-size:.98rem;}
+.hero-secondary a{color:var(--red);font-weight:600;text-decoration:underline;text-underline-offset:3px;}
+
+.hero-img-wrap{position:relative;}
+.hero-img{border:3px solid var(--ink);box-shadow:10px 10px 0 var(--ink);width:100%;object-fit:cover;}
+.hero-tag{position:absolute;bottom:-15px;left:-12px;background:var(--paper);border:2.5px solid var(--ink);font-family:'Space Mono',monospace;font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:7px 11px;transform:rotate(-2deg);}
+.postmark{position:absolute;top:-26px;right:-14px;width:112px;height:112px;transform:rotate(8deg);}
+.postmark text{font-family:'Space Mono',monospace;font-weight:700;fill:var(--blue);}
+
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:28px;}
+  .hero-img-wrap{order:-1;max-width:440px;margin:0 auto;}
+  .hero-img{max-height:42vh;object-position:center 20%;}
+  .postmark{right:6px;top:-22px;}
+  .hero-lead{max-width:none;}
+}
+@media(max-width:560px){
+  body{font-size:17px;}
+  .hero{padding:28px 0 48px;}
+  .hero-lead{font-size:1.05rem;word-break:break-word;overflow-wrap:break-word;}
+  .net-form .btn{width:100%;}
+  .net-form input{min-width:0;width:100%;}
+  .net-form{flex-direction:column;}
+  .envelope{padding:18px 16px;}
+  .btn{padding:14px 20px;}
+  .btn--gold{font-size:1.3rem;padding:14px 20px;}
+}
+
+/* price */
+.pricing{background:var(--blue);color:var(--paper);padding:70px 0;}
+.price-card{max-width:720px;margin:0 auto;background:var(--paper);color:var(--ink);border-radius:6px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;box-shadow:8px 8px 0 rgba(0,0,0,.35);}
+.price-left{padding:32px 28px;}
+.price-amt{font-family:'Bebas Neue',sans-serif;font-size:5.2rem;line-height:.8;}
+.price-amt sup{font-size:1.9rem;vertical-align:super;}
+.price-cad{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin-top:6px;}
+.price-feat{list-style:none;margin-top:16px;}
+.price-feat li{font-size:.95rem;padding:7px 0;border-bottom:1px dotted var(--ink);display:flex;gap:10px;}
+.price-feat li::before{content:"✶";color:var(--gold);}
+.price-right{padding:32px 28px;background:var(--paper2);border-left:3px solid var(--ink);text-align:center;display:flex;flex-direction:column;justify-content:center;}
+.badge{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red);border:2px solid var(--red);padding:5px 10px;display:inline-block;margin:0 auto 16px;border-radius:3px;}
+.guarantee{margin-top:16px;border-left:3px solid var(--gold);padding-left:14px;font-size:.9rem;text-align:left;}
+.price-try{margin-top:16px;padding-top:16px;border-top:2px solid var(--ink);}
+@media(max-width:680px){.price-card{grid-template-columns:1fr;}.price-right{border-left:none;border-top:3px solid var(--ink);}.price-amt{font-size:4.2rem;}}
+@media(max-width:480px){.price-left{padding:24px 18px;}.price-right{padding:24px 18px;}}
+
+/* consolidated offer card (box + payment in one) */
+.offer-card{max-width:500px;margin:0 auto;background:var(--paper);color:var(--ink);border-radius:6px;padding:30px 30px 32px;box-shadow:8px 8px 0 rgba(0,0,0,.35);text-align:center;}
+.offer-card .price-feat{text-align:left;margin:0;}
+.offer-card .price-feat li:last-child{border-bottom:none;}
+.offer-meta{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin:16px 0 6px;}
+.offer-card .badge{margin:14px auto 16px;}
+.offer-try{margin-top:20px;padding-top:16px;border-top:1px dotted var(--ink);font-size:.92rem;}
+.offer-try a{color:var(--red);font-weight:600;text-decoration:underline;text-underline-offset:3px;}
+@media(max-width:480px){.offer-card{padding:24px 20px 28px;}}
+
+footer{background:var(--blue);color:var(--paper);text-align:center;padding:40px 24px;font-size:.9rem;}
+@media(max-width:480px){footer{padding:32px 20px;}}
+footer a{color:var(--gold);text-decoration:none;}
+footer .fw{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.04em;}
+.social{display:inline-flex;gap:18px;font-family:'Space Mono',monospace;font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;margin-top:12px;}
+@media(prefers-reduced-motion:reduce){.btn{transition:none;}}
+
+/* slideshow */
+.hero-slideshow{padding-top:32px;}
+.hero-row{display:grid;grid-template-columns:1fr .82fr;gap:48px;align-items:center;}
+.hero-copy{text-align:left;}
+.hero-copy h1{font-size:clamp(1.9rem,3.2vw,2.9rem);line-height:.95;}
+.hero-copy .hero-lead{max-width:42ch;margin:14px 0 22px;}
+.hero-cta{display:flex;flex-direction:column;gap:9px;align-items:flex-start;}
+.hero-feat{max-width:340px;margin:10px 0 0;}
+.hero-feat li{font-size:.9rem;padding:6px 0;}
+@media(max-width:860px){.hero-feat{margin:10px auto 0;text-align:left;}}
+.hero-cta .btn{width:100%;max-width:270px;font-size:1.05rem;padding:10px 20px;box-shadow:3px 3px 0 var(--ink);}
+.hero-cta .btn--gold{font-size:1.1rem;padding:11px 20px;}
+.hero-cta .btn:hover{box-shadow:5px 5px 0 var(--ink);}
+@media(max-width:860px){
+  .hero-row{grid-template-columns:1fr;gap:30px;}
+  .hero-copy{text-align:center;max-width:600px;margin:0 auto;}
+  .hero-copy .hero-lead{margin-left:auto;margin-right:auto;}
+  .hero-cta{align-items:center;}
+  .hero-cta .btn{max-width:320px;}
+}
+.slideshow{position:relative;max-width:420px;margin:0 auto;}
+.slideshow-frame{position:relative;background:var(--paper2);overflow:hidden;border-radius:3px;aspect-ratio:4/5;}
+.ship-notice{font-family:'Space Mono',monospace;font-size:.74rem;line-height:1.5;letter-spacing:.02em;text-align:center;color:var(--ink);background:var(--paper2);border-radius:6px;padding:9px 12px;margin-bottom:14px;}
+.ship-notice b{color:var(--red);}
+.slides{display:flex;height:100%;transition:transform .5s ease;touch-action:pan-y;}
+.slide{flex:0 0 100%;width:100%;min-width:0;max-width:100%;height:100%;box-sizing:border-box;}
+.slide img,.slide video{width:100%;height:100%;object-fit:cover;background:var(--paper2);display:block;-webkit-user-drag:none;user-select:none;pointer-events:none;}
+.slide-cap{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(27,23,20,.82));color:var(--paper);font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;padding:34px 16px 14px;}
+.slide-nav{position:absolute;top:50%;transform:translateY(-50%);background:var(--paper);border:2.5px solid var(--ink);width:40px;height:40px;border-radius:50%;font-family:'Bebas Neue',sans-serif;font-size:1.5rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:3px 3px 0 var(--ink);z-index:3;color:var(--ink);}
+.slide-nav:active{box-shadow:1px 1px 0 var(--ink);}
+.slide-nav.prev{left:8px;}.slide-nav.next{right:8px;}
+.dots{display:flex;gap:9px;justify-content:center;margin-top:18px;}
+.dot{width:11px;height:11px;border-radius:50%;border:2px solid var(--ink);background:transparent;cursor:pointer;padding:0;transition:background .2s;}
+.dot[aria-selected="true"]{background:var(--red);border-color:var(--red);}
+.slideshow .postmark{position:absolute;top:-26px;right:-14px;z-index:4;}
+.slideshow .hero-tag{bottom:auto;top:-15px;left:-12px;z-index:4;}
+@media(max-width:600px){.slide-nav{display:none;}}
+
+/* feeling-beat layout */
+.smell-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:start;margin-top:34px;}
+.smell-story p{font-size:1.12rem;line-height:1.62;margin-bottom:14px;}
+.smell-story p:last-child{margin-bottom:0;}
+.inside-card{background:var(--paper);border:2.5px solid var(--ink);border-radius:6px;box-shadow:6px 6px 0 var(--ink);padding:22px 26px 24px;}
+.inside-card h3{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:1.7rem;letter-spacing:.02em;margin-bottom:8px;}
+.inside-card .price-feat{margin:0;}
+.inside-card .price-feat li:last-child{border-bottom:none;}
+.manifesto{max-width:620px;margin:38px auto 0;text-align:center;font-style:italic;font-size:1.08rem;line-height:1.6;color:var(--soft);}
+.perf{border:none;border-top:2px dashed var(--ink);opacity:.28;max-width:300px;margin:0 auto 30px;}
+@media(max-width:760px){.smell-grid{grid-template-columns:1fr;gap:24px;}}
+
+/* maker section (face moved down) */
+.maker-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:center;}
+.maker-grid .hero-img-wrap{max-width:420px;}
+.maker-grid .hero-img{max-height:none;}
+@media(max-width:760px){.maker-grid{grid-template-columns:1fr;gap:26px;}.maker-grid .hero-img-wrap{order:-1;margin:0 auto;}}
+</style>
+</head>
+<body>
+
+<div class="airmail" aria-hidden="true"></div>
+<nav>
+  <a href="#top" class="wordmark">Floating Post<small>aka floating boobs post · hội an</small></a>
+</nav>
+
+<!-- HERO — PRODUCT SLIDESHOW (face moved down to maker section) -->
+<header class="hero-slideshow wrap" id="top">
+ <div class="hero-row">
+  <div class="slideshow" aria-roledescription="carousel" aria-label="what arrives in your mailbox">
+    <div class="slideshow-frame">
+      <button class="slide-nav prev" aria-label="previous slide">‹</button>
+      <button class="slide-nav next" aria-label="next slide">›</button>
+      <div class="slides">
+        <div class="slide"><img src="slide-9.jpg" alt="A hand holding a Floating Post postcard on a lantern-lit Hội An street at dusk" loading="eager" decoding="async"></div>
+        <div class="slide"><img src="slide-4.jpg" alt="Rainbow stacks of handmade Floating Post envelopes with a hand-drawn mermaid card and incense in Hội An" loading="lazy" decoding="async"></div>
+        <div class="slide"><img src="slide-12.jpg" alt="Pink and yellow envelopes with the FloatingPost Hội An return address and Vietnamese horse stamps" loading="lazy" decoding="async"></div>
+        <div class="slide"><img src="slide-5.jpg" alt="Floating Post contents laid out — Karma sticker, red boob-stamp envelope, Vietnamese stamps, heart stickers and the welcome letter" loading="lazy" decoding="async"></div>
+        <div class="slide"><video src="slide-3.mp4" poster="slide-3-poster.jpg" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video><button class="vid-play" aria-label="play video">▶</button></div>
+      </div>
+    </div>
+    <div class="dots">
+      <button class="dot" aria-selected="true" aria-label="go to slide 1"></button>
+      <button class="dot" aria-label="go to slide 2"></button>
+      <button class="dot" aria-label="go to slide 3"></button>
+      <button class="dot" aria-label="go to slide 4"></button>
+      <button class="dot" aria-label="go to slide 5"></button>
+    </div>
+    <div id="swipe-debug" style="margin-top:8px;font-family:monospace;font-size:11px;background:#000;color:#0f0;padding:6px 8px;border-radius:4px;white-space:pre-wrap;word-break:break-all;">debug: waiting for touch…</div>
+  </div>
+
+  <div class="hero-copy">
+    <h1 style="margin-bottom:8px;">a piece of <span class="red">Vietnam,</span><br>once a month.</h1>
+    <span class="eyebrow" style="display:block;">Hội An, Vietnam → your mailbox</span>
+    <p class="hero-lead" style="margin-top:14px;">A hand-made envelope leaves Hội An for your mailbox — original art, a letter, and one small mystery envelope you're not allowed to open.<br>Made by a tattoo artist.</p>
+    <div class="hero-cta">
+      <a class="btn btn--gold" href="https://buy.stripe.com/8x2aEYgty7Fo4jleHfcQU04" target="_blank" data-checkout="subscribe-hero">Subscribe — $15/mo →</a>
+      <a class="btn" href="https://buy.stripe.com/cNi28selq1h04jlcz7cQU05" target="_blank" data-checkout="trial">Try one envelope — $18 →</a>
+    </div>
+    <div style="font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.04em;color:var(--soft);margin-top:18px;text-transform:uppercase;">ships worldwide · cancel anytime · sign up by the 15th</div>
+    <div class="ship-notice" style="margin-top:12px;margin-bottom:0;"><b>Next shipping date: July 25th</b> · join by July 15th to receive the next envelope</div>
+  </div>
+ </div>
+</header>
+
+<!-- FEELING BEAT — make them want it before the price -->
+<section style="background:var(--paper2);padding:64px 0;">
+  <div class="wrap" style="max-width:940px;">
+    <div style="text-align:center;">
+      <span class="eyebrow">what it feels like</span>
+      <h2 style="margin:10px 0 0;">it still smells like vietnam.</h2>
+    </div>
+    <div class="smell-grid">
+      <div class="smell-story">
+        <p>I fell in love with Vietnam. So I started mailing little pieces of it to strangers across the world.</p>
+        <p>Once a month an envelope leaves a tiny post office in Hội An — sun, ink, and paper, with your name on it. When's the last time you held a real letter from a country you've maybe never been to?</p>
+        <p>And tucked inside: one small sealed thing you're <em>not allowed to open</em>. It's not for you. 🤫</p>
+      </div>
+      <aside class="inside-card">
+        <h3>in every envelope</h3>
+        <ul class="price-feat">
+          <li>An original art print, drawn by hand</li>
+          <li>A personal letter from Hội An</li>
+          <li>The sealed mystery envelope you can't open</li>
+          <li>+ a fortune, a sticker &amp; rotating surprises</li>
+        </ul>
+      </aside>
+    </div>
+    <p class="manifesto">Floating Post was made for analog lovers, postcard collectors, romantics — and anyone who likes falling in love with places far away. Places they've maybe never been to.</p>
+  </div>
+</section>
+
+<!-- WHO'S MAKING THIS — the face, moved down to do the trust job -->
+<section style="padding:64px 0 44px;">
+  <div class="wrap maker-grid">
+    <div class="hero-img-wrap">
+      <img class="hero-img" src="hero_top.jpg" alt="Ela in her Hội An studio holding a stack of orange envelopes">
+      <span class="hero-tag">the hands behind it ✶ hội an</span>
+    </div>
+    <div>
+      <span class="eyebrow">who's mailing this</span>
+      <h2 style="margin:8px 0 14px;">Hi, I'm Ela.</h2>
+      <p style="font-size:1.08rem;line-height:1.6;">I'm a tattoo artist who moved to Vietnam — and started mailing strangers a little piece of the place I fell for. Every envelope is drawn, kissed and packed by hand — then carried to a post office that still cancels stamps by hand.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ============================================= -->
+<!-- QUIET EMAIL NET — the ONLY email form. demoted, below the buy. -->
+<!-- ============================================= -->
+<section style="background:var(--paper);padding:12px 0 56px;">
+  <div class="wrap" style="max-width:480px;text-align:center;">
+    <hr class="perf">
+    <span class="eyebrow">not ready to subscribe?</span>
+    <h2 style="margin:8px 0 12px;white-space:nowrap;font-size:clamp(1.5rem,6.2vw,2.3rem);">get a free fortune first.</h2>
+    <p style="font-size:1.02rem;line-height:1.5;margin-bottom:22px;">Drop your email and I'll send you a free fortune from Vietnam — plus first dibs when spots open. 🤫</p>
+
+    <!-- wired to Kit form 9627464 -->
+    <form id="netform" class="net-form" action="https://app.kit.com/forms/9627464/subscriptions" method="post"
+          style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+      <input type="email" name="email_address" required placeholder="Your email" aria-label="Your email"
+             style="flex:1;min-width:180px;font-family:'Space Mono',monospace;font-size:.95rem;padding:14px 16px;border:2.5px solid var(--ink);border-radius:4px;background:#fff;color:var(--ink);">
+      <button type="submit" class="btn btn--red">Send it →</button>
+    </form>
+
+    <div class="btn-sub" style="margin-top:12px;">free · no spam · unsubscribe anytime</div>
+  </div>
+</section>
+
+<footer>
+  <div class="fw">Floating Post</div>
+  <p style="margin-top:10px;">Made with love (and ink) in Hội An, Vietnam · officially Floating Boobs Post</p>
+  <p><a href="https://floatingboobs.com">floatingboobs.com</a> · <a href="mailto:floatingboobs69@gmail.com">floatingboobs69@gmail.com</a></p>
+  <div class="social">
+    <a href="https://instagram.com/floatingpost" target="_blank">@floatingpost</a>
+    <a href="https://tiktok.com/@floating.post" target="_blank">@floating.post</a>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-checkout]').forEach(function(el){
+    el.addEventListener('click',function(){ if(window.fbq) fbq('track','InitiateCheckout',{content_name:el.getAttribute('data-checkout')}); });
+  });
+  var nf=document.getElementById('netform');
+  if(nf){nf.addEventListener('submit',function(){ if(window.fbq) fbq('track','Lead'); });}
+
+  // slideshow (manual only — no auto-advance)
+  // Uses Pointer Events (one unified system for touch + mouse) instead of
+  // separate touch/mouse handlers — avoids the classic mobile-Safari bug where
+  // a delayed "ghost" mouse event fires ~300ms after a real touch and stalls the drag.
+  (function(){
+    var show=document.querySelector('.slideshow'); if(!show) return;
+    var track=show.querySelector('.slides');
+    var slides=show.querySelectorAll('.slide');
+    var dots=show.querySelectorAll('.dot');
+    var i=0, n=slides.length;
+    function setVideos(){ slides.forEach(function(s,j){ var v=s.querySelector('video'); if(v){ v.muted=true; if(j===i){ var p=v.play(); if(p&&p.catch) p.catch(function(){}); } else { v.pause(); } } }); }
+    function go(k){ i=(k+n)%n; track.style.transition='transform .5s ease'; track.style.transform='translateX(-'+(i*100)+'%)';
+      dots.forEach(function(d,j){ d.setAttribute('aria-selected', j===i?'true':'false'); }); setVideos(); }
+    dots.forEach(function(d,j){ d.addEventListener('click',function(){ go(j); }); });
+    var prev=show.querySelector('.prev'), next=show.querySelector('.next');
+    if(next) next.addEventListener('click',function(){ go(i+1); });
+    if(prev) prev.addEventListener('click',function(){ go(i-1); });
+
+    // touch drag — axis-locked, and explicitly claims the gesture from iOS Safari
+    // once it's confirmed horizontal (preventDefault on a NON-passive touchmove),
+    // so the OS can't fight the JS for control mid-swipe.
+    var x0=null, y0=null, dragging=false, lock=null, lastTouchTs=0;
+    var dbg=document.getElementById('swipe-debug');
+    function log(msg){ if(dbg) dbg.textContent='debug: '+msg; }
+    track.style.touchAction='pan-y';
+    track.addEventListener('touchstart',function(e){
+      x0=e.touches[0].clientX; y0=e.touches[0].clientY; dragging=true; lock=null;
+      track.style.transition='none'; lastTouchTs=Date.now();
+      log('touchstart fired · x0='+Math.round(x0));
+    },{passive:true});
+    track.addEventListener('touchmove',function(e){
+      if(!dragging){ log('touchmove but dragging=false (!)'); return; }
+      var dx=e.touches[0].clientX-x0, dy=e.touches[0].clientY-y0;
+      if(lock===null && (Math.abs(dx)>6 || Math.abs(dy)>6)) lock = Math.abs(dx)>Math.abs(dy) ? 'x' : 'y';
+      log('touchmove dx='+Math.round(dx)+' dy='+Math.round(dy)+' lock='+lock);
+      if(lock==='y') return; // let the page scroll natively
+      e.preventDefault(); // claim the gesture — stop Safari's own handling
+      track.style.transform='translateX(calc(-'+(i*100)+'% + '+dx+'px))';
+    },{passive:false});
+    track.addEventListener('touchend',function(e){
+      if(!dragging){ log('touchend but dragging was already false (!)'); return; }
+      dragging=false; lastTouchTs=Date.now();
+      var dx=e.changedTouches[0].clientX-x0;
+      log('touchend dx='+Math.round(dx)+' lock='+lock+' → i was '+i);
+      if(lock==='x'){ if(dx<-40) go(i+1); else if(dx>40) go(i-1); else go(i); } else { go(i); }
+      log('touchend dx='+Math.round(dx)+' lock='+lock+' → i now '+i);
+    },{passive:true});
+    track.addEventListener('touchcancel',function(){ log('touchcancel fired'); if(!dragging) return; dragging=false; go(i); },{passive:true});
+
+    // mouse drag (desktop) — ignores the ~300ms ghost mouse events iOS fires after a real touch
+    var mx0=null, mdragging=false;
+    track.addEventListener('mousedown',function(e){
+      if(Date.now()-lastTouchTs<700) return; // was actually a touch, ignore the echo
+      mx0=e.clientX; mdragging=true; track.style.transition='none'; e.preventDefault();
+    });
+    window.addEventListener('mousemove',function(e){ if(!mdragging) return; var dx=e.clientX-mx0; track.style.transform='translateX(calc(-'+(i*100)+'% + '+dx+'px))'; });
+    window.addEventListener('mouseup',function(e){ if(!mdragging) return; mdragging=false; var dx=e.clientX-mx0; if(dx<-40) go(i+1); else if(dx>40) go(i-1); else go(i); });
+
+    go(0);
+  })();
+</script>
+</body>
+</html>
