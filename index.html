@@ -202,6 +202,10 @@ footer .fw{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.
 .perf{border:none;border-top:2px dashed var(--ink);opacity:.28;max-width:300px;margin:0 auto 30px;}
 @media(max-width:760px){.smell-grid{grid-template-columns:1fr;gap:24px;}}
 
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.testi-grid .inside-card{box-shadow:none;border-color:rgba(27,23,20,.35);}
+@media(max-width:760px){.testi-grid{grid-template-columns:1fr;}}
+
 /* FAQ */
 .faq{border-bottom:1px dotted var(--ink);padding:4px 0;}
 .faq summary{font-family:'Space Mono',monospace;font-weight:700;font-size:.92rem;letter-spacing:.02em;padding:14px 4px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;}
@@ -254,7 +258,8 @@ footer .fw{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.
       <a class="btn btn--gold" href="https://buy.stripe.com/cNiaEYcdi4tc3fhaqZcQU0b" target="_blank" data-checkout="subscribe-hero">Join — €13/mo →</a>
       <a class="btn" href="https://buy.stripe.com/bJeaEY3GMf7QbLNaqZcQU0a" target="_blank" data-checkout="trial">Try one envelope — €16 →</a>
     </div>
-    <div style="font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.04em;color:var(--soft);margin-top:18px;text-transform:uppercase;">Free worldwide shipping. Cancel anytime.</div>
+    <div style="font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.04em;color:var(--soft);margin-top:18px;text-transform:uppercase;">Free worldwide shipping. Cancel anytime. We'll make it right if it doesn't arrive.</div>
+    <div class="ship-notice" style="display:inline-block;text-align:left;margin-top:14px;">Join by July 15th to receive next month's envelope · <b>Next shipping date: July 25th</b></div>
   </div>
  </div>
 </header>
@@ -279,9 +284,38 @@ footer .fw{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.
           <li>An original art print, drawn by hand</li>
           <li>A personal letter from Hội An</li>
           <li>The sealed mystery envelope you can't open</li>
-          <li>+ a fortune, a sticker &amp; rotating surprises</li>
+          <li>A fortune, a sticker &amp; rotating surprises</li>
+          <li>A monthly shot at the hand-painted Dó paper postcard</li>
+          <li>A monthly shot at the Golden Boob — a free hand-drawn portrait</li>
         </ul>
       </aside>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING — why subscribe instead of a one-off -->
+<section class="pricing">
+  <div class="wrap">
+    <div class="price-card">
+      <div class="price-left">
+        <span class="eyebrow" style="color:var(--red);">the subscription</span>
+        <div class="price-amt" style="margin-top:8px;">€13<sup>/mo</sup></div>
+        <div class="price-cad">billed monthly · cancel anytime</div>
+        <ul class="price-feat">
+          <li>An original art print, drawn by hand</li>
+          <li>A personal letter from Hội An</li>
+          <li>The sealed mystery envelope you can't open</li>
+          <li>A monthly shot at the Dó paper postcard</li>
+          <li>A monthly shot at the Golden Boob portrait</li>
+          <li>The Floating Boobs Times — Ela's mini newspaper</li>
+        </ul>
+      </div>
+      <div class="price-right">
+        <span class="badge">subscriber perks</span>
+        <p style="font-size:.98rem;">Every month is different — new art, new lottery, new mystery. The longer you stay, the better the odds.</p>
+        <div class="guarantee">Didn't arrive in 6 weeks? We resend, no questions asked. We'll always make it right.</div>
+        <div class="offer-try">Not ready to commit? <a href="https://buy.stripe.com/bJeaEY3GMf7QbLNaqZcQU0a" target="_blank" data-checkout="trial">Try one envelope for €16 →</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -304,6 +338,30 @@ footer .fw{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.
 </section>
 
 
+
+<!-- PLACEHOLDER TESTIMONIALS — swap [bracketed] copy for real subscriber quotes before shipping. Do not launch with fabricated quotes. -->
+<section style="padding:44px 0 20px;">
+  <div class="wrap" style="max-width:940px;">
+    <div style="text-align:center;margin-bottom:26px;">
+      <span class="eyebrow">from real mailboxes</span>
+      <h2 style="margin:8px 0 0;">What lands on doorsteps.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="inside-card">
+        <p style="font-style:italic;">"[Subscriber quote goes here]"</p>
+        <p class="hero-spec" style="margin-top:14px;">— [Name, city/country]</p>
+      </div>
+      <div class="inside-card">
+        <p style="font-style:italic;">"[Subscriber quote goes here]"</p>
+        <p class="hero-spec" style="margin-top:14px;">— [Name, city/country]</p>
+      </div>
+      <div class="inside-card">
+        <p style="font-style:italic;">"[Subscriber quote goes here]"</p>
+        <p class="hero-spec" style="margin-top:14px;">— [Name, city/country]</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FAQ -->
 <section style="background:var(--paper2);padding:56px 0;">
@@ -370,7 +428,7 @@ footer .fw{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.
 <footer>
   <div class="fw">Floating Post</div>
   <p class="hand" style="margin-top:12px;font-size:1.5rem;color:var(--gold);">Art will save the world. Please keep creating.</p>
-  <p style="margin-top:10px;">Made with love (and ink) in Hội An, Vietnam · officially Floating Boobs Post</p>
+  <p style="margin-top:10px;">Made with love (and ink) in Hội An, Vietnam</p>
   <p><a href="https://floatingboobs.com">floatingboobs.com</a> · <a href="mailto:floatingboobs69@gmail.com">floatingboobs69@gmail.com</a></p>
   <div class="social">
     <a href="https://instagram.com/floatingpost" target="_blank">@floatingpost</a>
