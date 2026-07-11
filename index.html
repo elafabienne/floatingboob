@@ -201,12 +201,14 @@ footer .fw{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.
 
 /* gift box */
 .gift-section{padding:60px 0;}
-.gift-card{max-width:640px;margin:0 auto;background:var(--paper);border:2.5px solid var(--ink);border-radius:6px;box-shadow:8px 8px 0 rgba(0,0,0,.35);padding:34px 36px 38px;text-align:center;}
-.gift-card h2{margin:8px 0 14px;}
+.gift-card{background:var(--paper);border:2.5px solid var(--ink);border-radius:6px;box-shadow:8px 8px 0 rgba(0,0,0,.35);padding:34px 40px 38px;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:start;}
+.gift-col--text{text-align:left;}
+.gift-col--buy{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.gift-card h2{margin:8px 0 14px;font-size:clamp(2.4rem,5vw,3.6rem);}
 .gift-card h2 .red{color:var(--red);}
-.gift-card p.gift-lead{font-size:1.05rem;line-height:1.55;max-width:46ch;margin:0 auto 18px;}
-.gift-card p.gift-sub{font-family:'Space Mono',monospace;font-size:.78rem;letter-spacing:.03em;color:var(--soft);margin-bottom:20px;}
-.gift-details{list-style:none;text-align:left;max-width:340px;margin:0 auto 26px;}
+.gift-card p.gift-lead{font-size:1.05rem;line-height:1.55;margin:0 0 16px;}
+.gift-card p.gift-sub{font-family:'Space Mono',monospace;font-size:.78rem;letter-spacing:.03em;color:var(--soft);margin:14px 0 0;max-width:320px;}
+.gift-details{list-style:none;text-align:left;margin:0;}
 .gift-details li{font-size:.92rem;padding:7px 0;border-bottom:1px dotted var(--ink);display:flex;gap:10px;align-items:center;}
 .gift-details li::before{content:"✶";color:var(--gold);flex-shrink:0;}
 .gift-details li:last-child{border-bottom:none;}
@@ -216,9 +218,14 @@ footer .fw{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.
 .gift-opt:active{transform:translate(1px,1px);}
 .gift-opt b{display:block;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.02em;margin-top:2px;}
 .gift-opt.gift-opt--sticker{padding:8px;background:transparent;border:none;}
-.gift-opt.gift-opt--sticker img{display:block;width:160px;height:auto;border-radius:6px;transition:transform .12s;}
+.gift-opt.gift-opt--sticker img{display:block;width:150px;height:auto;border-radius:6px;transition:transform .12s;}
 .gift-opt.gift-opt--sticker[aria-pressed="true"] img{outline:3px solid var(--gold);outline-offset:2px;}
 .gift-opt.gift-opt--sticker:active img{transform:translate(1px,1px);}
+@media(max-width:760px){
+  .gift-card{grid-template-columns:1fr;gap:24px;text-align:center;}
+  .gift-col--text{text-align:center;}
+  .gift-details{max-width:340px;margin:0 auto;}
+}
 @media(max-width:480px){.gift-card{padding:26px 20px 28px;}
   .gift-options{flex-wrap:nowrap;gap:8px;}
   .gift-opt.gift-opt--sticker{flex:1;padding:4px;min-width:0;}
@@ -330,29 +337,33 @@ footer .fw{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.
 
 <!-- GIFT -->
 <section class="gift-section">
-  <div class="wrap" style="max-width:640px;">
+  <div class="wrap" style="max-width:920px;">
     <div class="gift-card">
-      <span class="eyebrow">give it as a gift</span>
-      <h2>THE PERSON WHO HAS<br>EVERYTHING <span class="red">DOESN'T<br>HAVE THIS.</span></h2>
-      <p class="gift-lead">A monthly envelope of original art from Vietnam. Weird, funny, handmade. Something they'll actually remember getting.</p>
-      <p class="gift-sub">Enter the recipient's name and mailing address at checkout — we'll send it straight to them every month.</p>
-      <ul class="gift-details">
-        <li>Ships directly to them</li>
-        <li>No gift wrap needed</li>
-        <li>A special birthday surprise — if it's a birthday gift</li>
-        <li>Arrives from Vietnam — that's the story</li>
-      </ul>
-      <div class="gift-options" role="group" aria-label="choose gift length">
-        <button type="button" class="gift-opt gift-opt--sticker" data-price="16" data-months="1"
-                data-link="https://buy.stripe.com/5kQ00ka5a8JsaHJ56FcQU0c" aria-pressed="true">
-          <img src="gift_1month_sticker.png" alt="1 Month gift envelope sticker — €16">
-        </button>
-        <button type="button" class="gift-opt gift-opt--sticker" data-price="42" data-months="3"
-                data-link="https://buy.stripe.com/aFa4gAcdibVEbLN7eNcQU0d" aria-pressed="false">
-          <img src="gift_3months_sticker.png" alt="3 Months gift envelope sticker — €42">
-        </button>
+      <div class="gift-col gift-col--text">
+        <span class="eyebrow">give it as a gift</span>
+        <h2>THE PERSON WHO<br>HAS EVERYTHING<br><span class="red">DOESN'T HAVE THIS.</span></h2>
+        <p class="gift-lead">A monthly envelope of original art from Vietnam. Weird, funny, handmade. Something they'll actually remember getting.</p>
+        <ul class="gift-details">
+          <li>Ships directly to them</li>
+          <li>No gift wrap needed</li>
+          <li>A special birthday surprise — if it's a birthday gift</li>
+          <li>Arrives from Vietnam — that's the story</li>
+        </ul>
       </div>
-      <a class="btn btn--gold" id="gift-cta" href="https://buy.stripe.com/5kQ00ka5a8JsaHJ56FcQU0c" target="_blank" data-checkout="gift">Give as a gift →</a>
+      <div class="gift-col gift-col--buy">
+        <div class="gift-options" role="group" aria-label="choose gift length">
+          <button type="button" class="gift-opt gift-opt--sticker" data-price="16" data-months="1"
+                  data-link="https://buy.stripe.com/5kQ00ka5a8JsaHJ56FcQU0c" aria-pressed="true">
+            <img src="gift_1month_sticker.png" alt="1 Month gift envelope sticker — €16">
+          </button>
+          <button type="button" class="gift-opt gift-opt--sticker" data-price="42" data-months="3"
+                  data-link="https://buy.stripe.com/aFa4gAcdibVEbLN7eNcQU0d" aria-pressed="false">
+            <img src="gift_3months_sticker.png" alt="3 Months gift envelope sticker — €42">
+          </button>
+        </div>
+        <a class="btn btn--gold" id="gift-cta" href="https://buy.stripe.com/5kQ00ka5a8JsaHJ56FcQU0c" target="_blank" data-checkout="gift">Give as a gift →</a>
+        <p class="gift-sub">Enter the recipient's name and mailing address at checkout — we'll send it straight to them every month.</p>
+      </div>
     </div>
   </div>
 </section>
