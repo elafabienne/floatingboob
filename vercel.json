@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/postales", "destination": "https://postales-nine.vercel.app" },
+    { "source": "/postales/:path*", "destination": "https://postales-nine.vercel.app/:path*" }
+  ]
+}
