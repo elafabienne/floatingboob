@@ -243,3 +243,11 @@ footer .fw{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.
 .archive-card .btn{font-size:1.1rem;padding:10px 20px;box-shadow:3px 3px 0 var(--ink);}
 .archive-card .btn:hover{box-shadow:5px 5px 0 var(--ink);}
 @media(max-width:520px){.archive-grid{grid-template-columns:1fr;}}
+
+/* archive teaser card (homepage) */
+.home-archive-card{background:var(--paper);border:2.5px solid var(--ink);border-radius:6px;box-shadow:8px 8px 0 rgba(0,0,0,.35);padding:28px;display:grid;grid-template-columns:.8fr 1.2fr;gap:32px;align-items:center;text-align:left;}
+.home-archive-img{border:2.5px solid var(--ink);border-radius:4px;box-shadow:5px 5px 0 var(--ink);aspect-ratio:4/5;object-fit:cover;transform:rotate(-2deg);}
+@media(max-width:600px){
+  .home-archive-card{grid-template-columns:1fr;text-align:center;padding:24px 20px;}
+  .home-archive-img{max-width:180px;margin:0 auto;transform:none;}
+}
