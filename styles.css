@@ -226,19 +226,37 @@ footer .fw{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.
 .maker-grid .hero-img{max-height:none;}
 @media(max-width:760px){.maker-grid{grid-template-columns:1fr;gap:26px;}.maker-grid .hero-img-wrap{order:-1;margin:0 auto;}}
 
-/* archive — past issues, sold individually (plain shop-grid style) */
-.archive-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px 28px;margin-top:36px;}
-.archive-card{display:block;text-decoration:none;color:inherit;text-align:center;}
-.archive-img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border-radius:4px;}
-.archive-title{font-family:'Lora',Georgia,serif;font-style:italic;font-weight:500;font-size:1.05rem;line-height:1.35;color:var(--ink);margin:18px 0 6px;}
-.archive-price{font-family:'Lora',Georgia,serif;font-size:1.02rem;color:var(--ink);margin:0;}
-.archive-card--sold .archive-title,.archive-card--sold .archive-price{color:var(--soft);}
-.archive-card--sold .archive-price{text-decoration:line-through;}
-.archive-status{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin-top:6px;}
+/* archive — past issues, sold individually */
+/* desktop: bordered cards with teaser copy + separate buy button */
+.archive-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin-top:36px;}
+.archive-card{background:var(--paper);border:2.5px solid var(--ink);border-radius:6px;box-shadow:6px 6px 0 var(--ink);overflow:hidden;display:flex;flex-direction:column;}
+.archive-img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border-bottom:2.5px solid var(--ink);}
+.archive-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1;}
+.archive-issue{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.02em;line-height:1;}
+.archive-month{display:block;font-family:'Space Mono',monospace;font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin:4px 0 10px;}
+.archive-teaser{font-size:.96rem;line-height:1.5;margin-bottom:12px;font-style:italic;color:var(--soft);}
+.archive-card .badge{margin:0 0 14px;align-self:flex-start;}
+.archive-buy-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:6px;}
+.archive-price{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;}
+.archive-card--sold .badge{color:var(--soft);border-color:var(--soft);}
+.archive-card--sold .archive-price{color:var(--soft);text-decoration:line-through;}
+.archive-gone{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:.03em;color:var(--soft);border:2.5px dashed var(--soft);border-radius:4px;padding:8px 18px;}
+.archive-card .btn{font-size:1.1rem;padding:10px 20px;box-shadow:3px 3px 0 var(--ink);}
+.archive-card .btn:hover{box-shadow:5px 5px 0 var(--ink);}
+
+/* mobile: plain shop-style layout, image + title + price */
+.shop-grid{display:none;}
+.shop-card{display:block;text-decoration:none;color:inherit;text-align:center;}
+.shop-img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border-radius:4px;}
+.shop-title{font-family:'Lora',Georgia,serif;font-style:italic;font-weight:500;font-size:.92rem;line-height:1.35;color:var(--ink);margin:12px 0 5px;}
+.shop-price{font-family:'Lora',Georgia,serif;font-size:.92rem;color:var(--ink);margin:0;}
+.shop-card--sold .shop-title,.shop-card--sold .shop-price{color:var(--soft);}
+.shop-card--sold .shop-price{text-decoration:line-through;}
+.shop-status{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin-top:6px;}
+
 @media(max-width:520px){
-  .archive-grid{grid-template-columns:1fr 1fr;gap:32px 16px;}
-  .archive-title{font-size:.92rem;margin:12px 0 5px;}
-  .archive-price{font-size:.92rem;}
+  .archive-grid--desktop{display:none;}
+  .shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px 16px;margin-top:36px;}
 }
 
 /* archive teaser card (homepage) */
